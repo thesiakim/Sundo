@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+                <mvc:annotation-driven />
+
+	<!--  웹페이지 접근 인터셉터 Start -->
+    <!-- <bean id="securityInterceptor" class="business.sys.intercept.SecurityInterceptor"/> -->
+    
+    <bean id="commonInterceptor" class="business.sys.intercept.CommonInterceptor"/>
+    
+	<!-- Interceptor 설정 -->
+  	<!-- <mvc:interceptors>
+ 
+    	공통 Interceptor
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/login.do" />
+			<mvc:exclude-mapping path="/login/*.do" />
+			<mvc:exclude-mapping path="/mobile/*.do" />
+			<mvc:exclude-mapping path="/userreg/getFile.do" />
+			<mvc:exclude-mapping path="/userreg/descriptionJsp.do" />
+			<ref bean="securityInterceptor" />
+		</mvc:interceptor>
+        
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<ref bean="commonInterceptor" />
+		</mvc:interceptor>
+	
+	</mvc:interceptors> -->
+
+	<!-- egovframework package안에 있는 annotation 정의 -->
+    <context:component-scan base-package="business">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+    </context:component-scan>
+
+	<!-- View resolver -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="cache" value="false" />
+		<property name="prefix" value="/WEB-INF/jsp/egovframework/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- XML Resolver -->
+	<bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="order" value="1"/>
+		<property name="location" value="/WEB-INF/classes/egovframework/config/ajax-views.xml"/>
+	</bean>
+
+	<bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver" >
+	   <property name="order"><value>0</value></property>
+    </bean>
+
+    <!-- Excel Template (beanNameViewResolver) -->
+	<bean id="excelTempView" class="commf.view.ExcelTempView" />
+
+	<!-- Excel (beanNameViewResolver) -->
+	<bean id="excelView" class="commf.view.ExcelView" />
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	    <property name="maxUploadSize" value="1048576000"/>
+		<property name="maxInMemorySize" value="1000000000" />
+	</bean>
+
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+    	<property name="defaultErrorView" value="error/errorPage"/>
+    	<property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.Exception">error/errorPage</prop>
+                <prop key="DataAccessException">error/errorPage</prop>
+                <prop key="BusinessException">error/egovBizException</prop>
+				<prop key="EgovBizException">error/egovBizException</prop>
+            </props>
+        </property>
+    </bean>
+    
+    
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >
+        <!-- @ResponseBody를 사용하기 위해 -->
+        <!-- jre : jackson-core, jackson-mapper 필요-->
+        <property name="messageConverters">
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+        </property> 
+    </bean>
+
+</beans>

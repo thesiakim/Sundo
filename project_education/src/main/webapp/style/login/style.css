@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Epic';
+  src:  url('../../fonts/Epic.eot?2u4rg8');
+  src:  url('../../fonts/Epic.eot?2u4rg8#iefix') format('embedded-opentype'),
+    url('../../fonts/Epic.ttf?2u4rg8') format('truetype'),
+    url('../../fonts/Epic.woff?2u4rg8') format('woff'),
+    url('../../fonts/Epic.svg?2u4rg8#Epic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Epic' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Add-Plus:before {
+  content: "\e900";
+}
+.icon-Add:before {
+  content: "\e901";
+}
+.icon-Admin-line:before {
+  content: "\e902";
+}
+.icon-Admin:before {
+  content: "\e903";
+}
+.icon-Arrow-Down-1:before {
+  content: "\e904";
+}
+.icon-Arrow-Down-Big:before {
+  content: "\e905";
+}
+.icon-Arrow-Down:before {
+  content: "\e906";
+}
+.icon-Arrow-End:before {
+  content: "\e907";
+}
+.icon-Arrow-First:before {
+  content: "\e908";
+}
+.icon-Arrow-Left-1_1:before {
+  content: "\e909";
+}
+.icon-Arrow-Left-1:before {
+  content: "\e90a";
+}
+.icon-Arrow-Left-Big:before {
+  content: "\e90b";
+}
+.icon-Arrow-Left:before {
+  content: "\e90c";
+}
+.icon-Arrow-Right-1:before {
+  content: "\e90d";
+}
+.icon-Arrow-Right-Big:before {
+  content: "\e90e";
+}
+.icon-Arrow-Right:before {
+  content: "\e90f";
+}
+.icon-Arrow-Up-Big:before {
+  content: "\e910";
+}
+.icon-Arrow-Up:before {
+  content: "\e911";
+}
+.icon-Back-copy:before {
+  content: "\e912";
+}
+.icon-Back:before {
+  content: "\e913";
+}
+.icon-Bookmark:before {
+  content: "\e914";
+}
+.icon-Bottom-left:before {
+  content: "\e915";
+}
+.icon-Bottom-Right:before {
+  content: "\e916";
+}
+.icon-calendar-thin:before {
+  content: "\e917";
+}
+.icon-Calendar:before {
+  content: "\e918";
+}
+.icon-chart-line-1:before {
+  content: "\e919";
+}
+.icon-chart-line-2:before {
+  content: "\e91a";
+}
+.icon-Check:before {
+  content: "\e91b";
+}
+.icon-Clipboard:before {
+  content: "\e91c";
+}
+.icon-Close:before {
+  content: "\e91d";
+}
+.icon-doc-file:before {
+  content: "\e91e";
+}
+.icon-DSS:before {
+  content: "\e91f";
+}
+.icon-End:before {
+  content: "\e920";
+}
+.icon-excel-file:before {
+  content: "\e921";
+}
+.icon-Explore:before {
+  content: "\e922";
+}
+.icon-File-Setting:before {
+  content: "\e923";
+}
+.icon-Filter:before {
+  content: "\e924";
+}
+.icon-Graph-Box:before {
+  content: "\e925";
+}
+.icon-Important-Round:before {
+  content: "\e926";
+}
+.icon-layer-01:before {
+  content: "\e927";
+}
+.icon-layer-02:before {
+  content: "\e928";
+}
+.icon-Layer:before {
+  content: "\e929";
+}
+.icon-list-move:before {
+  content: "\e92a";
+}
+.icon-Lock:before {
+  content: "\e92b";
+}
+.icon-login:before {
+  content: "\e92c";
+}
+.icon-logout-New:before {
+  content: "\e92d";
+}
+.icon-Man:before {
+  content: "\e92e";
+}
+.icon-Map-Select:before {
+  content: "\e92f";
+}
+.icon-map:before {
+  content: "\e930";
+}
+.icon-Menu-List:before {
+  content: "\e931";
+}
+.icon-multi-screen:before {
+  content: "\e932";
+}
+.icon-Pin-Solid_1:before {
+  content: "\e933";
+}
+.icon-Play-Next:before {
+  content: "\e934";
+}
+.icon-Play-Previous:before {
+  content: "\e935";
+}
+.icon-Play:before {
+  content: "\e936";
+}
+.icon-question:before {
+  content: "\e937";
+}
+.icon-Refresh:before {
+  content: "\e938";
+}
+.icon-Remove-Minus:before {
+  content: "\e939";
+}
+.icon-Remove:before {
+  content: "\e93a";
+}
+.icon-ruler:before {
+  content: "\e93b";
+}
+.icon-save-disk:before {
+  content: "\e93c";
+}
+.icon-Scan-Doc:before {
+  content: "\e93d";
+}
+.icon-Scan-Img:before {
+  content: "\e93e";
+}
+.icon-Search:before {
+  content: "\e93f";
+}
+.icon-Shelter:before {
+  content: "\e940";
+}
+.icon-Stop:before {
+  content: "\e941";
+}
+.icon-Table:before {
+  content: "\e942";
+}
+.icon-trash-thin:before {
+  content: "\e943";
+}
+.icon-Write-Edit:before {
+  content: "\e944";
+}

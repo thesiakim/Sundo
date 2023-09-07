@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Sample">
+
+
+	<!-- sample1  -->
+	<select id="getPriorityUserData" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+ 				
+		SELECT user_id, user_email, user_name, user_type, user_agent_code
+		FROM user_data
+		WHERE 1=1
+		AND use_yn = 'Y'
+		
+	</select>
+	
+
+
+	<!-- 유저 정보 변경 -->	
+	<update id="updateAutorityUp" parameterClass="java.util.HashMap">
+		UPDATE user_data
+		SET user_type = 'ADMIN'
+		WHERE user_id = #user_id#
+	</update>
+	<update id="updateAutorityDown" parameterClass="java.util.HashMap">
+		UPDATE user_data
+		SET user_type = null
+		WHERE user_id = #user_id#
+	</update>
+
+</sqlMap>
+
+

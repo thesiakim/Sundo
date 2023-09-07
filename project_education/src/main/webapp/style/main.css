@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+/* ******************** 메인스타일 ******************** */
+
+
+.main-wrap {
+   padding: 50px 40px;
+   width: calc(100% - 250px);
+   margin-left: 250px;
+}
+
+.scrollable-div {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+}
+
+.scrollable-div ul {
+   padding-left: 10px;
+}
+
+.scrollable-div ul ul {
+   margin-left: 10px;
+}
+
+.scrollable-div li {
+   list-style: none;
+   background: url("../images/gis/i-menuBtn.svg") no-repeat;
+   background-position: 0 4px;
+   background-size: 16px 16px;
+   padding-left: 20px; /* 왼쪽에 10px의 공백을 추가합니다. */
+   position: relative;
+}
+
+.scrollable-div li input.checkbox + label::before {
+   content: none; /* 아이콘을 숨깁니다. */
+}
+
+.scrollable-div li input.checkbox + label::before {
+   content: none; /* 아이콘을 숨깁니다. */
+}
+
+#clusterDistance{
+   padding:0 15px 0 15px;
+}
+
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-modal-header .btn-close {
+   float: right;
+   cursor: pointer;
+   width: 6px;
+   height: 6px;
+   font-weight: normal;
+}
+
+#custom-table {
+   width: 100%;
+   border-top: 1px solid #f0f0f0;
+   border-collapse: collapse;
+   text-align: center;
+   font-size: 12px;
+   color: #545454;
+}
+
+#custom-table th, td {
+   border-bottom: 1px solid #f0f0f0;
+   padding: 8px;
+}
+
+#custom-table th {
+   background: #f0f0f0;
+   font-weight: normal;
+}
+
+#custom-table td {
+   white-space: nowrap;
+}
+
+.custom-close {
+  float: right;
+  cursor: pointer;
+}
+
+.separator {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0; /* 구분선 위아래 여백 설정 */
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px #0056b3;
+  margin-left: 8px;
+  margin-bottom: 10px;
+    }
+
+.button:hover { background-color: #0056b3; }
+
+.button:active {
+  background-color: #00499e;
+  box-shadow: 0 1px #00346b;
+  transform: translateY(1px);
+    }
+    
+#type {
+   padding: 5px 10px;
+   font-size: 14px;
+   color: #007bff;
+   background-color: #fff;
+   border: 1px solid #007bff;
+   border-radius: 3px;
+   text-align: center;
+   margin-left: 7px;
+   margin-right: 7px;
+   margin-bottom: 7px;
+    }
+    
+.button:nth-child(2) {
+    margin-right: -8px; 
+ 
+   }
+   
+   #type {
+   padding: 5px 10px;
+   font-size: 14px;
+   color: #007bff;
+   background-color: #fff;
+   border: 1px solid #007bff;
+   border-radius: 3px;
+   text-align: center;
+    margin-left: 7px;
+     margin-right: 7px;
+     margin-bottom: 7px;
+    }
+    
+   #clusterCategory {
+   table-layout: fixed;
+   text-align : center;
+   background-color: #f0f0f0;
+   border: 1px solid black;
+   }
+   
+   #clusterCategory td {
+   table-layout: fixed;
+   text-align : center;
+   background-color: #f0f0f0;
+   border: 1px solid black;
+   }
+   
+   
+   #category-reset {
+    float: right;
+    margin:5px;
+    padding: 2px;
+    border: 1px solid;
+   }
+   
+   
+   
+   
+   
+  #category-reset {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px #0056b3;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+#category-reset:hover {
+  background-color: #0056b3;
+}
+
+
+#category-reset:active {
+  background-color: #00499e;
+  box-shadow: 0 1px #00346b;
+  transform: translateY(1px);
+    }

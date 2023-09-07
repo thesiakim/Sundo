@@ -1,0 +1,31 @@
+@import url("./reset.css");
+@import url("./bootstrap.min.css");
+@import url("./common.css");
+@import url("./layout.css");
+@import url("./design.css");
+/* @import url("./layer.css"); */
+/* @import url("./main.css"); */
+
+
+/* 스크롤바 */
+/*
+::-webkit-scrollbar : 스크롤바 영역에 대한 설정
+::-webkit-scrollbar-thumb : 스크롤바 막대에 대한 설정
+::-webkit-scrollbar-track  : 스크롤바 뒷 배경에 대한 설정
+*/
+
+::-webkit-scrollbar {
+    width: 7px;  /* 스크롤바의 너비 */
+	height:7px;
+}
+
+::-webkit-scrollbar-thumb {
+    height:30%; /* 스크롤바의 길이 */
+    background: var(--blueGray); /* 스크롤바의 색상 */
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--whiteGray);  /*스크롤바 뒷 배경 색상*/
+}
+
